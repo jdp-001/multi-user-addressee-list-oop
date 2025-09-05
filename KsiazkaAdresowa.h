@@ -1,18 +1,26 @@
 #include <iostream>
-#include "Uzytkownik.h"
 #include <vector>
+#include <windows.h>
+
+#include "Uzytkownik.h"
 
 using namespace std;
 
 class KsiazkaAdresowa
 {
-    vector <Uzytkownik> uzytkownicy;
-
     int idZalogowanegoUzytkownika;
     int idOstatniegoAdresata;
     int idUsunietegoAdresata;
 
+    vector <Uzytkownik> uzytkownicy;
+
+    Uzytkownik podajDaneNowegoUzytkownika();
+    int pobierzIdNowegoUzytkownika();
+    bool czyIstniejeLogin(string login);
+    string wczytajLinie();
+
 public:
     void rejestracjaUzytkownika();
     int logowanieUzytkownika();
+    void wypiszWszystkichUzytkownikow();
 };

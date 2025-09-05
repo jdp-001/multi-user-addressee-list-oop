@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <windows.h>
+#include <fstream>
+#include <sstream>
 
 #include "Uzytkownik.h"
 
@@ -18,8 +20,15 @@ class KsiazkaAdresowa
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
     string wczytajLinie();
+    void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
+    string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
+    bool czyPlikJestPusty(fstream &plikTekstowy);
+    string konwerjsaIntNaString(int liczba);
+
+    string nazwaPlikuZUzytkownikami;
 
 public:
+    KsiazkaAdresowa();
     void rejestracjaUzytkownika();
     int logowanieUzytkownika();
     void wypiszWszystkichUzytkownikow();

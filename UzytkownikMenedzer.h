@@ -27,6 +27,7 @@ public:
     void rejestracjaUzytkownika();
     int logowanieUzytkownika(); // TEGO NIE MA U ARTURA
     void wypiszWszystkichUzytkownikow();
+    void wczytajUzytkownikowZPliku();
 };
 
 #endif // UZYTKOWNIKMENEDZER_H

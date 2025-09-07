@@ -61,3 +61,8 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
 }
 
 //int UzytkownikMenedzer::logowanieUzytkownika(); // TEGO NIE MA U ARTURA
+
+void UzytkownikMenedzer::wczytajUzytkownikowZPliku()
+{
+    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+}

@@ -24,6 +24,7 @@ class UzytkownikMenedzer
     PlikZUzytkownikami plikZUzytkownikami;
 
 public:
+    UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {};
     void rejestracjaUzytkownika();
     int logowanieUzytkownika(); // TEGO NIE MA U ARTURA
     void wypiszWszystkichUzytkownikow();

@@ -17,18 +17,19 @@ class UzytkownikMenedzer
 {
     int idZalogowanegoUzytkownika;
     vector <Uzytkownik> uzytkownicy;
+    PlikZUzytkownikami plikZUzytkownikami;
 
     Uzytkownik podajDaneNowegoUzytkownika();
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
-    PlikZUzytkownikami plikZUzytkownikami;
+
 
 public:
     UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {};
     void rejestracjaUzytkownika();
-    int logowanieUzytkownika(); // TEGO NIE MA U ARTURA
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
+    //int logowanieUzytkownika(); // TEGO NIE MA U ARTURA
 };
 
 #endif // UZYTKOWNIKMENEDZER_H

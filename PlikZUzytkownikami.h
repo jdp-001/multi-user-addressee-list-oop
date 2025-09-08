@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
-#include<cstdlib> // Moim zdaniem zbêdne
+#include<cstdlib>
 
 #include "Uzytkownik.h"
 #include "MetodyPomocnicze.h"
@@ -14,7 +14,6 @@ using namespace std;
 class PlikZUzytkownikami
 {
     const string nazwaPlikuZUzytkownikami;
-    //fstream plikTekstowy;
 
     bool czyPlikJestPusty();
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);

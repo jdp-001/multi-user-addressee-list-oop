@@ -1,24 +1,5 @@
 #include "PlikZUzytkownikami.h"
 
-bool PlikZUzytkownikami::czyPlikJestPusty()
-{
-    fstream plikTekstowy;
-    plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::in | ios::ate);
-
-    plikTekstowy.seekg(0, ios::end);
-    if (plikTekstowy.tellg() == 0)
-    {
-        plikTekstowy.close();
-        return true;
-    }
-
-    else
-    {
-        plikTekstowy.close();
-        return false;
-    }
-}
-
 void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
 {
     string liniaZDanymiUzytkownika = "";
@@ -44,17 +25,6 @@ void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
     plikTekstowy.close();
 }
 
-string PlikZUzytkownikami::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik)
-{
-    string liniaZDanymiUzytkownika = "";
-
-    liniaZDanymiUzytkownika += MetodyPomocnicze::konwerjsaIntNaString(uzytkownik.pobierzId())+ '|';
-    liniaZDanymiUzytkownika += uzytkownik.pobierzLogin() + '|';
-    liniaZDanymiUzytkownika += uzytkownik.pobierzHaslo() + '|';
-
-    return liniaZDanymiUzytkownika;
-}
-
 vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku()
 {
     Uzytkownik uzytkownik;
@@ -74,6 +44,35 @@ vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku()
         plikTekstowy.close();
     }
     return uzytkownicy;
+}
+
+bool PlikZUzytkownikami::czyPlikJestPusty()
+{
+    fstream plikTekstowy;
+    plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::in);
+
+    plikTekstowy.seekg(0, ios::end);
+    if (plikTekstowy.tellg() == 0)
+    {
+        plikTekstowy.close();
+        return true;
+    }
+    else
+    {
+        plikTekstowy.close();
+        return false;
+    }
+}
+
+string PlikZUzytkownikami::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik)
+{
+    string liniaZDanymiUzytkownika = "";
+
+    liniaZDanymiUzytkownika += MetodyPomocnicze::konwerjsaIntNaString(uzytkownik.pobierzId())+ '|';
+    liniaZDanymiUzytkownika += uzytkownik.pobierzLogin() + '|';
+    liniaZDanymiUzytkownika += uzytkownik.pobierzHaslo() + '|';
+
+    return liniaZDanymiUzytkownika;
 }
 
 Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami)

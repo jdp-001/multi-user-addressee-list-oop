@@ -3,16 +3,14 @@
 
 #include <iostream>
 #include <sstream>
-//#include <ostream>
+#include <string>
 
 using namespace std;
 
 class MetodyPomocnicze
 {
 public:
-
     static string wczytajLinie();
-
     static string konwerjsaIntNaString(int liczba);
 
 };

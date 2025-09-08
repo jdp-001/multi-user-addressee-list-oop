@@ -1,6 +1,5 @@
 #include "MetodyPomocnicze.h"
 
-
 string MetodyPomocnicze::wczytajLinie()
 {
     string wejscie = "";

@@ -1,5 +1,31 @@
 #include "UzytkownikMenedzer.h"
 
+void UzytkownikMenedzer::rejestracjaUzytkownika()
+{
+    Uzytkownik uzytkownik = podajDaneNowegoUzytkownika();
+
+    uzytkownicy.push_back(uzytkownik);
+    plikZUzytkownikami.dopiszUzytkownikaDoPliku(uzytkownik);
+
+    cout << endl << "Konto zalozono pomyslnie" << endl << endl;
+    system("pause");
+}
+
+void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
+{
+    for (int i = 0; i < uzytkownicy.size(); i++)
+    {
+        cout << uzytkownicy[i].pobierzId() << endl;
+        cout << uzytkownicy[i].pobierzLogin() << endl;
+        cout << uzytkownicy[i].pobierzHaslo() << endl;
+    }
+}
+
+void UzytkownikMenedzer::wczytajUzytkownikowZPliku()
+{
+    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+}
+
 Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika()
 {
     Uzytkownik uzytkownik;
@@ -39,30 +65,5 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login)
     return false;
 }
 
-void UzytkownikMenedzer::rejestracjaUzytkownika()
-{
-    Uzytkownik uzytkownik = podajDaneNowegoUzytkownika();
-
-    uzytkownicy.push_back(uzytkownik);
-    plikZUzytkownikami.dopiszUzytkownikaDoPliku(uzytkownik);
-
-    cout << endl << "Konto zalozono pomyslnie" << endl << endl;
-    system("pause");
-}
-
-void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
-{
-    for (int i = 0; i < uzytkownicy.size(); i++)
-    {
-        cout << uzytkownicy[i].pobierzId() << endl;
-        cout << uzytkownicy[i].pobierzLogin() << endl;
-        cout << uzytkownicy[i].pobierzHaslo() << endl;
-    }
-}
-
 //int UzytkownikMenedzer::logowanieUzytkownika(); // TEGO NIE MA U ARTURA
 
-void UzytkownikMenedzer::wczytajUzytkownikowZPliku()
-{
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-}

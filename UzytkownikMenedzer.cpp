@@ -1,5 +1,10 @@
 #include "UzytkownikMenedzer.h"
 
+int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika() // ROBOCZY GETTER
+{
+    return idZalogowanegoUzytkownika;
+}
+
 void UzytkownikMenedzer::rejestracjaUzytkownika()
 {
     Uzytkownik uzytkownik = podajDaneNowegoUzytkownika();
@@ -65,5 +70,43 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login)
     return false;
 }
 
-//int UzytkownikMenedzer::logowanieUzytkownika(); // TEGO NIE MA U ARTURA
+int UzytkownikMenedzer::logowanieUzytkownika() // TEGO NIE MA U ARTURA
+{
+    Uzytkownik uzytkownik;
+    string login = "", haslo = "";
+
+    cout << endl << "Podaj login: ";
+    login = MetodyPomocnicze::wczytajLinie();
+
+    vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
+    while (itr != uzytkownicy.end())
+    {
+        if (itr -> pobierzLogin() == login)
+        {
+            for (int iloscProb = 3; iloscProb > 0; iloscProb--)
+            {
+                cout << "Podaj haslo. Pozostalo prob: " << iloscProb << ": ";
+                haslo = MetodyPomocnicze::wczytajLinie();
+
+                if (itr -> pobierzHaslo() == haslo)
+                {
+                    cout << endl << "Zalogowales sie." << endl << endl;
+                    system("pause");
+                    // miejsce na zapisanie id do idZalogowanegoUzytkownika
+                    idZalogowanegoUzytkownika = itr -> pobierzId();
+                    cout << "->" << pobierzIdZalogowanegoUzytkownika() << endl; // INFO ROBOCZE
+                    cout << "->" << itr -> pobierzId() << endl; // INFO ROBOCZE
+                    return itr -> pobierzId();
+                }
+            }
+            cout << "Wprowadzono 3 razy bledne haslo." << endl;
+            system("pause");
+            return 0;
+        }
+        itr++;
+    }
+    cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
+    system("pause");
+    return 0;
+}
 

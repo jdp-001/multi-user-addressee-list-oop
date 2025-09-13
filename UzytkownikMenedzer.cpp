@@ -93,7 +93,7 @@ int UzytkownikMenedzer::logowanieUzytkownika() // TEGO NIE MA U ARTURA
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
                     // miejsce na zapisanie id do idZalogowanegoUzytkownika
-                    idZalogowanegoUzytkownika = itr -> pobierzId();
+                    idZalogowanegoUzytkownika = itr -> pobierzId(); // Nowe!
                     cout << "->" << pobierzIdZalogowanegoUzytkownika() << endl; // INFO ROBOCZE
                     cout << "->" << itr -> pobierzId() << endl; // INFO ROBOCZE
                     return itr -> pobierzId();

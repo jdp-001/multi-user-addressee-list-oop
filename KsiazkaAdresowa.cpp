@@ -12,5 +12,9 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 
 void KsiazkaAdresowa::logowanieUzytkownika()
 {
+    int wehikulId;
     uzytkownikMenedzer.logowanieUzytkownika();
+    wehikulId = uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
+    adresatMenedzer.ustawIdZalogowanegoUzytkownika(wehikulId);
+    adresatMenedzer.pobierzAdresatowZalogowanegoUzytkownikaZPliku();
 }

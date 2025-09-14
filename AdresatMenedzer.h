@@ -26,12 +26,19 @@ class AdresatMenedzer
 
 public:
 //    AdresatMenedzer(string nazwaPlikuAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {};
+
+    // Getters
+    // Setters
+    void ustawIdZalogowanegoUzytkownika(int idPrzekazywane);
+
+    void pobierzAdresatowZalogowanegoUzytkownikaZPliku();
+
     int dodajAdresata();
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
     void wyswietlWszystkichAdresatow();
     int usunAdresata();
-    void adytujAdresata();
+    void edytujAdresata();
 
 };
 

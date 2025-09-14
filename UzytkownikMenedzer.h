@@ -23,10 +23,14 @@ class UzytkownikMenedzer
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
 
-    int pobierzIdZalogowanegoUzytkownika(); // ROBOCZY GETTER
-
 public:
     UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {};
+
+    // Getters
+    int pobierzIdZalogowanegoUzytkownika();
+    // Setters
+
+
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();

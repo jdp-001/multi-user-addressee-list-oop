@@ -1,9 +1,12 @@
 #include "UzytkownikMenedzer.h"
 
-int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika() // ROBOCZY GETTER
+// Getters
+int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
 {
     return idZalogowanegoUzytkownika;
 }
+//Setters
+
 
 void UzytkownikMenedzer::rejestracjaUzytkownika()
 {

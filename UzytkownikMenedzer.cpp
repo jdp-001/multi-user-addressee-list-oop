@@ -73,7 +73,7 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login)
     return false;
 }
 
-int UzytkownikMenedzer::logowanieUzytkownika() // TEGO NIE MA U ARTURA
+void UzytkownikMenedzer::logowanieUzytkownika() // TEGO NIE MA U ARTURA
 {
     Uzytkownik uzytkownik;
     string login = "", haslo = "";
@@ -97,19 +97,24 @@ int UzytkownikMenedzer::logowanieUzytkownika() // TEGO NIE MA U ARTURA
                     system("pause");
                     // miejsce na zapisanie id do idZalogowanegoUzytkownika
                     idZalogowanegoUzytkownika = itr -> pobierzId(); // Nowe!
-                    cout << "->" << pobierzIdZalogowanegoUzytkownika() << endl; // INFO ROBOCZE
-                    cout << "->" << itr -> pobierzId() << endl; // INFO ROBOCZE
-                    return itr -> pobierzId();
+                    //cout << "->" << pobierzIdZalogowanegoUzytkownika() << endl; // INFO ROBOCZE
+                    //cout << "->" << itr -> pobierzId() << endl; // INFO ROBOCZE
+                    //return itr -> pobierzId();
+                    return;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
-            return 0;
+            // return 0;
+            // Nie przypisuje idZalogowanegoUzytkownika = 0, nie wylogowuje sie
+            return;
         }
         itr++;
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
-    return 0;
+    // return 0;
+    // Nie przypisuje idZalogowanegoUzytkownika = 0, nie wylogowuje sie
+    return;
 }
 

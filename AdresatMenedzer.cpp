@@ -1,6 +1,10 @@
 #include "AdresatMenedzer.h"
 
 // Getters
+int AdresatMenedzer::pobiezIdZalogowanegoUzytkownika()
+{
+    return idZalogowanegoUzytkownika;
+}
 
 // Setters
 void AdresatMenedzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)

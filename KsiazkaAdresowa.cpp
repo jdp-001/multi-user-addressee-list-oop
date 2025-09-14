@@ -16,5 +16,6 @@ void KsiazkaAdresowa::logowanieUzytkownika()
     uzytkownikMenedzer.logowanieUzytkownika();
     wehikulId = uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
     adresatMenedzer.ustawIdZalogowanegoUzytkownika(wehikulId);
+    cout << "idZalogowanegoUzytkownika pobrane getterem z adresatMenedzer: " << adresatMenedzer.pobiezIdZalogowanegoUzytkownika() << endl;
     adresatMenedzer.pobierzAdresatowZalogowanegoUzytkownikaZPliku();
 }

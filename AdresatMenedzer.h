@@ -9,7 +9,7 @@
 
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
-//#include "PlikZAdresatami.h"
+#include "PlikZAdresatami.h"
 
 using namespace std;
 
@@ -20,19 +20,19 @@ class AdresatMenedzer
     int idUsunietegoAdresata;
 
     vector <Adresat> adresaci;
-//    PlikZAdresatami plikZAdresatami;
+    PlikZAdresatami plikZAdresatami;
 
     int podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
 
 public:
-//    AdresatMenedzer(string nazwaPlikuAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {};
+    AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {};
 
     // Getters
     int pobiezIdZalogowanegoUzytkownika(); // Na razie tylko na potrzeby testowania
     // Setters
     void ustawIdZalogowanegoUzytkownika(int idPrzekazywane);
 
-    void pobierzAdresatowZalogowanegoUzytkownikaZPliku();
+    void pobierzAdresatowZalogowanegoUzytkownikaZPliku(); // TO DO
 
     int dodajAdresata();
     void wyszukajAdresatowPoImieniu();

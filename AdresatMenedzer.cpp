@@ -15,5 +15,6 @@ void AdresatMenedzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytk
 void AdresatMenedzer::pobierzAdresatowZalogowanegoUzytkownikaZPliku()
 {
     // TO DO
+    plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
 
 }

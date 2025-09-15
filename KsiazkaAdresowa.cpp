@@ -19,3 +19,8 @@ void KsiazkaAdresowa::logowanieUzytkownika()
     cout << "idZalogowanegoUzytkownika pobrane getterem z adresatMenedzer: " << adresatMenedzer.pobiezIdZalogowanegoUzytkownika() << endl;
     adresatMenedzer.pobierzAdresatowZalogowanegoUzytkownikaZPliku();
 }
+
+void KsiazkaAdresowa::wypiszWszystkichAdresatow()
+{
+    adresatMenedzer.wypiszWszystkichAdresatow();
+}

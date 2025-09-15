@@ -1,0 +1,24 @@
+1|2|ala|abacki|111 111 111|aleksandra@wp.pl|alicji 123, aleksandrow|
+3|1|celina|caban|333 333 333|calinac@onet.pl|celiny 66, chelm|
+4|2|danuta|dolinska|444 444 443|danka@wp.pl|danki 233 m 34, Drawsko|
+5|2|eryk|ebacki|555 555 555|eryk55@onet.pl|eryka 343, elblag|
+6|2|franciszek|fedacki|666 666 666|franek66@wp.pl|frankowo 32|
+7|6|mark|malibu|888 888 888|mark@wp.pl|marki 345|
+8|7|Kris|Kristoferson|222 333 444|kris@wp.pl|krakow|
+9|2|john junior|heNRYK juNIor|111 222 666|henio.wp.pl|hrubieszow, polska|
+10|2|mark|MARkiewicZ|444 555 666|mark@wp.pl|Marki 234, POLSKA|
+11|2|magdalena|maGOwsKa|447 778 990|magda@wp.pl|malbork, polska|
+12|2|Urszula|uLAnoWskA|222 333 222|ula@wp.pl|Ule 46, polska|
+13|2|John Fitzgerlald|KennedY|222 222 223|jfk@onet.pl|krakow, polska|
+14|2|Andy Garcia|Morales|666 444 222|andy@wp.pl|andrychow, polska|
+15|2|Stefan|Stefanski|777 666 555|stefan@wp.pl|sochaCZEW, polska|
+16|2|John   Fitzgerrald| Kennedy|333 222 111|jfk@wp.pl|philadelphia, usa|
+17|2|John   Fitzgerrald| Kennnedy   Junior|222 222 222|jfk@onet.pl|washingtoN, usa|
+18|2|  !malcolm  The Sixth  - Junir|  Wesley Vi|333 333 333|mclm@wp.pl|polska|
+19|2|  #malcolm  - The  (sixth)   |   Chester 5|222 222 222|chESTER|polska|
+20|2|  John  -   Fitzgerrald  Junior 3| Kennedy|111 111 111|john.pl|washington|
+21|2|John Junior|Malvoy|111 111 555|jjm@wp.pl|pol|
+23|2| Gay The Second|Ritchy|222 222 222|mail|country|
+24|2|Zahary|Zibo|111 111 111|zz@wp.pl|zaglebie, polska|
+25|2|Xavier|Xerox|999 999 000|xavier@gmial.com|spain|
+26|2|Wiki|Wodecka|222 333 777|wiki@wp.pl|polska|

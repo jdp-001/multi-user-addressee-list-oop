@@ -31,7 +31,7 @@ public:
     void logowanieUzytkownika();
 
     //void dodajAdresata();
-    //void wypiszWszystkichAdresatow();
+    void wypiszWszystkichAdresatow();
 
 };
 

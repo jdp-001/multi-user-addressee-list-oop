@@ -15,7 +15,7 @@ int main()
     //ksiazkaAdresowa.rejestracjaUzytkownika();
     //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
-    //ksiazkaAdresowa.wypiszWszystkichAdresatow();
+    ksiazkaAdresowa.wypiszWszystkichAdresatow();
 
     return 0;
 }

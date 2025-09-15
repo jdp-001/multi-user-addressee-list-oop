@@ -23,6 +23,7 @@ class AdresatMenedzer
     PlikZAdresatami plikZAdresatami;
 
     int podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
+    void wyswietlDaneAdresata(Adresat adresat);
 
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {};
@@ -37,7 +38,7 @@ public:
     int dodajAdresata();
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
-    void wyswietlWszystkichAdresatow();
+    void wypiszWszystkichAdresatow();
     int usunAdresata();
     void edytujAdresata();
 

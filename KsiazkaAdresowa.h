@@ -32,6 +32,7 @@ public:
 
     //void dodajAdresata();
     void wypiszWszystkichAdresatow();
+    void zmianaHaslaZalogowanegoUzytkownika();
 
 };
 

@@ -22,6 +22,7 @@ class UzytkownikMenedzer
     Uzytkownik podajDaneNowegoUzytkownika();
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
+    void zapiszWszystkichUzytkownikowDoPliku();
 
 public:
     UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {};
@@ -35,6 +36,7 @@ public:
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
     void logowanieUzytkownika(); // TEGO NIE MA U ARTURA
+    void zmianaHaslaZalogowanegoUzytkownika();
 };
 
 #endif // UZYTKOWNIKMENEDZER_H

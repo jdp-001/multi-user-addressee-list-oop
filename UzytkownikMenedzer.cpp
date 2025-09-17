@@ -6,6 +6,15 @@ int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
     return idZalogowanegoUzytkownika;
 }
 //Setters
+void UzytkownikMenedzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)
+{
+    idZalogowanegoUzytkownika = noweIdZalogowanegoUzytkownika;
+}
+
+void UzytkownikMenedzer::wyzerujVectorUzytkownicy()
+{
+    uzytkownicy = {};
+}
 
 
 void UzytkownikMenedzer::rejestracjaUzytkownika()

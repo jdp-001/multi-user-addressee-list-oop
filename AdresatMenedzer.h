@@ -29,7 +29,7 @@ public:
     AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {};
 
     // Getters
-    int pobiezIdZalogowanegoUzytkownika(); // Na razie tylko na potrzeby testowania
+    int pobierzIdZalogowanegoUzytkownika(); // Na razie tylko na potrzeby testowania
     // Setters
     void ustawIdZalogowanegoUzytkownika(int idPrzekazywane);
 

@@ -1,7 +1,7 @@
 #include "AdresatMenedzer.h"
 
 // Getters
-int AdresatMenedzer::pobiezIdZalogowanegoUzytkownika()
+int AdresatMenedzer::pobierzIdZalogowanegoUzytkownika()
 {
     return idZalogowanegoUzytkownika;
 }

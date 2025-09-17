@@ -30,7 +30,8 @@ public:
     // Getters
     int pobierzIdZalogowanegoUzytkownika();
     // Setters
-
+    void ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika);
+    void wyzerujVectorUzytkownicy();
 
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();

@@ -60,7 +60,7 @@ void AdresatMenedzer::dodajAdresata()
     adresat = podajDaneNowegoAdresata();
 
     adresaci.push_back(adresat);
-    //dopiszAdresataDoPliku(adresat); // Tymczasowo nie zapisuje do pliku!!!
+    plikZAdresatami.dopiszAdresataDoPliku(adresat); // Tymczasowo nie zapisuje do pliku!!!
 
     //return ++idOstatniegoAdresata;
     ++idOstatniegoAdresata;

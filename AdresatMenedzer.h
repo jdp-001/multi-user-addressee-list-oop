@@ -6,6 +6,7 @@
 #include <windows.h>
 #include <fstream>
 #include <sstream>
+#include <algorithm>
 
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
@@ -24,6 +25,8 @@ class AdresatMenedzer
 
     int podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
+    Adresat podajDaneNowegoAdresata();
+    string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
 
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {};
@@ -35,7 +38,8 @@ public:
 
     void pobierzAdresatowZalogowanegoUzytkownikaZPliku(); // TO DO
 
-    int dodajAdresata();
+    //int dodajAdresata(); // TO DO
+    void dodajAdresata(); // TO DO
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
     void wypiszWszystkichAdresatow();

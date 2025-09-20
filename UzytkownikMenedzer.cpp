@@ -5,6 +5,7 @@ int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
 {
     return idZalogowanegoUzytkownika;
 }
+
 //Setters
 void UzytkownikMenedzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)
 {
@@ -105,16 +106,12 @@ void UzytkownikMenedzer::logowanieUzytkownika() // TEGO NIE MA U ARTURA
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
                     // miejsce na zapisanie id do idZalogowanegoUzytkownika
-                    idZalogowanegoUzytkownika = itr -> pobierzId(); // Nowe!
-                    //cout << "->" << pobierzIdZalogowanegoUzytkownika() << endl; // INFO ROBOCZE
-                    //cout << "->" << itr -> pobierzId() << endl; // INFO ROBOCZE
-                    //return itr -> pobierzId();
+                    idZalogowanegoUzytkownika = itr -> pobierzId();
                     return;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
-            // return 0;
             // Nie przypisuje idZalogowanegoUzytkownika = 0, nie wylogowuje sie
             return;
         }
@@ -122,7 +119,6 @@ void UzytkownikMenedzer::logowanieUzytkownika() // TEGO NIE MA U ARTURA
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
-    // return 0;
     // Nie przypisuje idZalogowanegoUzytkownika = 0, nie wylogowuje sie
     return;
 }

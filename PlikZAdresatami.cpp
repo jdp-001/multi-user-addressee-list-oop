@@ -9,21 +9,13 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(
 {
     Adresat adresat;
     vector <Adresat> adresaci;
-    //int idOstatniegoAdresata = 0;
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
     string daneOstaniegoAdresataWPliku = "";
     fstream plikTekstowy;
     plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::in);
 
-    // TEST TYMCZASOWY
-    //cout << "Wykonuje metode wczytajAdresatowZalogowanegoUzytkownikaZPliku" << endl;
-    //string anything;
-    //cin >> anything;
-
     if (plikTekstowy.good() == true)
     {
-        //cout << "Otwieram plik do czytania" << endl;
-        //cin >> anything;
         while (getline(plikTekstowy, daneJednegoAdresataOddzielonePionowymiKreskami))
         {
             if(idZalogowanegoUzytkownika == pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami))
@@ -44,20 +36,13 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(
     {
         string anything;
         idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
-        //cout << "ustawiam idOstatniegoAdresata = " << idOstatniegoAdresata << endl;
-        //cin >> anything;
-        //return idOstatniegoAdresata;
         return adresaci;
     }
     else
     {
-        //return 0;
-        //cout << "Nie ustawiam idOstatniegoAdresata" << endl;
-        //cin >> anything;
         return adresaci;
-    // Zwracam vector adresaci nawet jeœli jest pusty, a idOstatniegoAdresata zapamietuje
-    // jako atrybut lokalny klasy PlikZAdresatami. Korzystanie z tego pola bedzie wymagalo
-    // zastosowania gettera, na razie go nie stworzylem.
+    // Zwracam vector adresaci nawet jesli jest pusty, a idOstatniegoAdresata zapamietuje
+    // jako atrybut lokalny klasy PlikZAdresatami.
     }
 }
 

@@ -16,6 +16,7 @@ class Adresat
     string adres;
 
 public:
+    // Setters
     void ustawId(int noweId);
     void ustawIdUzytkownika(int noweIdUzytkownika);
     void ustawImie(string noweImie);
@@ -24,6 +25,7 @@ public:
     void ustawEmail(string nowyEmail);
     void ustawAdres(string nowyAdres);
 
+    // Getters
     int pobierzId();
     int pobierzIdUzytkownika();
     string pobierzImie();

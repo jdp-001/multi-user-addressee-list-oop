@@ -32,20 +32,14 @@ public:
     AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {};
 
     // Getters
-    int pobierzIdZalogowanegoUzytkownika(); // Na razie tylko na potrzeby testowania
+    int pobierzIdZalogowanegoUzytkownika();
+
     // Setters
     void ustawIdZalogowanegoUzytkownika(int idPrzekazywane);
 
-    void pobierzAdresatowZalogowanegoUzytkownikaZPliku(); // TO DO
-
-    //int dodajAdresata(); // TO DO
-    void dodajAdresata(); // TO DO
-    void wyszukajAdresatowPoImieniu();
-    void wyszukajAdresatowPoNazwisku();
+    void pobierzAdresatowZalogowanegoUzytkownikaZPliku();
+    void dodajAdresata();
     void wypiszWszystkichAdresatow();
-    int usunAdresata();
-    void edytujAdresata();
-
 };
 
 #endif // ADRESATMENEDZER_H

@@ -14,14 +14,12 @@ void AdresatMenedzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytk
 
 void AdresatMenedzer::pobierzAdresatowZalogowanegoUzytkownikaZPliku()
 {
-    // TO DO
     adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
     idOstatniegoAdresata = plikZAdresatami.pobierzIdOstatniegoAdresata();
 }
 
 void AdresatMenedzer::wypiszWszystkichAdresatow()
 {
-    // TO DO
     system("cls");
     if (!adresaci.empty())
     {
@@ -60,9 +58,8 @@ void AdresatMenedzer::dodajAdresata()
     adresat = podajDaneNowegoAdresata();
 
     adresaci.push_back(adresat);
-    plikZAdresatami.dopiszAdresataDoPliku(adresat); // Tymczasowo nie zapisuje do pliku!!!
+    plikZAdresatami.dopiszAdresataDoPliku(adresat);
 
-    //return ++idOstatniegoAdresata;
     ++idOstatniegoAdresata;
 }
 

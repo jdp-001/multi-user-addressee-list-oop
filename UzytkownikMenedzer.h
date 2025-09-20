@@ -36,7 +36,7 @@ public:
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
-    void logowanieUzytkownika(); // TEGO NIE MA U ARTURA
+    void logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
 };
 

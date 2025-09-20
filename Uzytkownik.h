@@ -12,10 +12,12 @@ class Uzytkownik
     string haslo;
 
 public:
+    // Setters
     void ustawId(int noweId);
     void ustawLogin(string nowyLogin);
     void ustawHaslo(string noweHaslo);
 
+    // Getters
     int pobierzId();
     string pobierzLogin();
     string pobierzHaslo();

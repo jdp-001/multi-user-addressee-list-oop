@@ -23,3 +23,4 @@
 24|2|Zahary|Zibo|111 111 111|zz@wp.pl|zaglebie, polska|
 25|2|Xavier|Xerox|999 999 000|xavier@gmial.com|spain|
 26|2|Wiki|Wodecka|222 333 777|wiki@wp.pl|polska|
+27|1|Karol|Nawrocki|123 456 789|kn@gov.pl|belweder, warszawa|

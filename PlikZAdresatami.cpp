@@ -1,20 +1,29 @@
 #include "PlikZAdresatami.h"
 
+int PlikZAdresatami::pobierzIdOstatniegoAdresata()
+{
+    return idOstatniegoAdresata;
+}
+
 vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika)
 {
     Adresat adresat;
     vector <Adresat> adresaci;
-    int idOstatniegoAdresata = 0;
+    //int idOstatniegoAdresata = 0;
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
     string daneOstaniegoAdresataWPliku = "";
     fstream plikTekstowy;
     plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::in);
 
     // TEST TYMCZASOWY
-    cout << "Wykonuje metode wczytajAdresatowZalogowanegoUzytkownikaZPliku" << endl;
+    //cout << "Wykonuje metode wczytajAdresatowZalogowanegoUzytkownikaZPliku" << endl;
+    //string anything;
+    //cin >> anything;
 
     if (plikTekstowy.good() == true)
     {
+        //cout << "Otwieram plik do czytania" << endl;
+        //cin >> anything;
         while (getline(plikTekstowy, daneJednegoAdresataOddzielonePionowymiKreskami))
         {
             if(idZalogowanegoUzytkownika == pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami))
@@ -22,8 +31,9 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(
                 adresat = pobierzDaneAdresata(daneJednegoAdresataOddzielonePionowymiKreskami);
                 adresaci.push_back(adresat);
             }
-        }
         daneOstaniegoAdresataWPliku = daneJednegoAdresataOddzielonePionowymiKreskami;
+        }
+
     }
     else
         cout << "Nie udalo sie otworzyc pliku i wczytac danych." << endl;
@@ -32,16 +42,23 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(
 
     if (daneOstaniegoAdresataWPliku != "")
     {
+        string anything;
         idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
+        //cout << "ustawiam idOstatniegoAdresata = " << idOstatniegoAdresata << endl;
+        //cin >> anything;
         //return idOstatniegoAdresata;
         return adresaci;
     }
     else
+    {
         //return 0;
+        //cout << "Nie ustawiam idOstatniegoAdresata" << endl;
+        //cin >> anything;
         return adresaci;
     // Zwracam vector adresaci nawet jeœli jest pusty, a idOstatniegoAdresata zapamietuje
     // jako atrybut lokalny klasy PlikZAdresatami. Korzystanie z tego pola bedzie wymagalo
     // zastosowania gettera, na razie go nie stworzylem.
+    }
 }
 
 int PlikZAdresatami::pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)

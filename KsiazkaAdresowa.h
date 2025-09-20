@@ -30,7 +30,7 @@ public:
     void wypiszWszystkichUzytkownikow();
     void logowanieUzytkownika();
 
-    //void dodajAdresata();
+    void dodajAdresata(); // TO DO
     void wypiszWszystkichAdresatow();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wylogowanieUzytkownika();

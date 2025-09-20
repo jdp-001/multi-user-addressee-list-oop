@@ -1,6 +1,7 @@
-1|2|ala|abacki|111 111 111|aleksandra@wp.pl|alicji 123, aleksandrow|
+1|2|ala|abacka|111 111 111|aleksandra@wp.pl|alicji 123, aleksandrow|
+2|2|ela|ebacka|888 111 111|eleonora@wp.pl|elka 123, elblag|
 3|1|celina|caban|333 333 333|calinac@onet.pl|celiny 66, chelm|
-4|2|danuta|dolinska|444 444 443|danka@wp.pl|danki 233 m 34, Drawsko|
+4|1|danuta|dolinska|444 444 443|danka@wp.pl|danki 233 m 34, Drawsko|
 5|2|eryk|ebacki|555 555 555|eryk55@onet.pl|eryka 343, elblag|
 6|2|franciszek|fedacki|666 666 666|franek66@wp.pl|frankowo 32|
 7|6|mark|malibu|888 888 888|mark@wp.pl|marki 345|

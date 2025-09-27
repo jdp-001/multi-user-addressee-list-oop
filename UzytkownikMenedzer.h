@@ -25,7 +25,10 @@ class UzytkownikMenedzer
     void zapiszWszystkichUzytkownikowDoPliku();
 
 public:
-    UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {};
+    UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami)
+    {
+        uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+    };
 
     // Getters
     int pobierzIdZalogowanegoUzytkownika();
@@ -35,7 +38,6 @@ public:
 
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    void wczytajUzytkownikowZPliku();
     void logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
 };

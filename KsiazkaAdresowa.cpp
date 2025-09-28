@@ -12,16 +12,21 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 
 void KsiazkaAdresowa::logowanieUzytkownika()
 {
-    int wehikulId;
+    //int wehikulId;
     uzytkownikMenedzer.logowanieUzytkownika();
-    wehikulId = uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
-    adresatMenedzer.ustawIdZalogowanegoUzytkownika(wehikulId);
-    adresatMenedzer.pobierzAdresatowZalogowanegoUzytkownikaZPliku(); // Tutaj mozemy pobrac idOstatniegoAdresata
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+    }
+
+    //wehikulId = uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
+    //adresatMenedzer.ustawIdZalogowanegoUzytkownika(wehikulId);
+    //adresatMenedzer.pobierzAdresatowZalogowanegoUzytkownikaZPliku(); // Tutaj mozemy pobrac idOstatniegoAdresata
 }
 
 void KsiazkaAdresowa::wypiszWszystkichAdresatow()
 {
-    adresatMenedzer.wypiszWszystkichAdresatow();
+    adresatMenedzer->wypiszWszystkichAdresatow();
 }
 
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
@@ -29,13 +34,26 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
     uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
 }
 
+// WPROWADZONA ZMIANA 16:56 !!!
 void KsiazkaAdresowa::wylogowanieUzytkownika()
 {
-    uzytkownikMenedzer.ustawIdZalogowanegoUzytkownika(0);
-    adresatMenedzer.ustawIdZalogowanegoUzytkownika(0);
+    uzytkownikMenedzer.wylogowanieUzytkownika();
+    delete adresatMenedzer;
+    adresatMenedzer = NULL;
+    //uzytkownikMenedzer.ustawIdZalogowanegoUzytkownika(0);
+    //adresatMenedzer->ustawIdZalogowanegoUzytkownika(0);
 }
 
+// WPROWADZONA ZMIANA 16:56
 void KsiazkaAdresowa::dodajAdresata()
 {
-    adresatMenedzer.dodajAdresata();
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer->dodajAdresata();
+    }
+    else
+    {
+        cout << "Aby dodac adresata, nalezy najpierw sie zalogowac" << endl;
+        system("pause");
+    }
 }

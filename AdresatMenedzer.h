@@ -16,7 +16,8 @@ using namespace std;
 
 class AdresatMenedzer
 {
-    int idZalogowanegoUzytkownika;
+    //int idZalogowanegoUzytkownika;
+    const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
     int idOstatniegoAdresata;
     int idUsunietegoAdresata;
 
@@ -29,7 +30,11 @@ class AdresatMenedzer
     string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
 
 public:
-    AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami) {};
+    AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
+    : plikZAdresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
+    {
+        adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+    }; // TO DO
 
     // Getters
     int pobierzIdZalogowanegoUzytkownika();

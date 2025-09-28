@@ -3,18 +3,18 @@
 // Getters
 int AdresatMenedzer::pobierzIdZalogowanegoUzytkownika()
 {
-    return idZalogowanegoUzytkownika;
+    return ID_ZALOGOWANEGO_UZYTKOWNIKA;
 }
 
 // Setters
-void AdresatMenedzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)
-{
-   idZalogowanegoUzytkownika = noweIdZalogowanegoUzytkownika;
-}
+//void AdresatMenedzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)
+//{
+//   idZalogowanegoUzytkownika = noweIdZalogowanegoUzytkownika;
+//}
 
 void AdresatMenedzer::pobierzAdresatowZalogowanegoUzytkownikaZPliku()
 {
-    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     idOstatniegoAdresata = plikZAdresatami.pobierzIdOstatniegoAdresata();
 }
 
@@ -68,7 +68,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
     Adresat adresat;
 
     adresat.ustawId(++idOstatniegoAdresata);
-    adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
     adresat.ustawImie(MetodyPomocnicze::wczytajLinie());

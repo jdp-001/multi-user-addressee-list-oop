@@ -78,9 +78,9 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login)
     return false;
 }
 
-void UzytkownikMenedzer::logowanieUzytkownika() // TEGO NIE MA U ARTURA
+void UzytkownikMenedzer::logowanieUzytkownika()
 {
-    Uzytkownik uzytkownik;
+    Uzytkownik uzytkownik; // TEGO NIE MA U ARTURA
     string login = "", haslo = "";
 
     cout << endl << "Podaj login: ";
@@ -136,3 +136,15 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
 
+bool UzytkownikMenedzer::czyUzytkownikJestZalogowany()
+{
+    if (idZalogowanegoUzytkownika > 0)
+        return true;
+    else
+        return false;
+}
+
+ void UzytkownikMenedzer::wylogowanieUzytkownika()
+ {
+     idZalogowanegoUzytkownika = 0;
+ }

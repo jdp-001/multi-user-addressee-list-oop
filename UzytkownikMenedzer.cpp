@@ -80,7 +80,7 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login)
 
 void UzytkownikMenedzer::logowanieUzytkownika()
 {
-    Uzytkownik uzytkownik; // TEGO NIE MA U ARTURA
+    //Uzytkownik uzytkownik;
     string login = "", haslo = "";
 
     cout << endl << "Podaj login: ";

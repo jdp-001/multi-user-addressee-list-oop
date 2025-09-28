@@ -22,7 +22,7 @@ class UzytkownikMenedzer
     Uzytkownik podajDaneNowegoUzytkownika();
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
-    void zapiszWszystkichUzytkownikowDoPliku();
+    //void zapiszWszystkichUzytkownikowDoPliku(); NIEPOTRZEBNE?
 
 public:
     UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami)

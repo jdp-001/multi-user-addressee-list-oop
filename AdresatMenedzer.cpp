@@ -15,7 +15,7 @@ int AdresatMenedzer::pobierzIdZalogowanegoUzytkownika()
 void AdresatMenedzer::pobierzAdresatowZalogowanegoUzytkownikaZPliku()
 {
     adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
-    idOstatniegoAdresata = plikZAdresatami.pobierzIdOstatniegoAdresata();
+    //idOstatniegoAdresata = plikZAdresatami.pobierzIdOstatniegoAdresata();
 }
 
 void AdresatMenedzer::wypiszWszystkichAdresatow()
@@ -58,16 +58,21 @@ void AdresatMenedzer::dodajAdresata()
     adresat = podajDaneNowegoAdresata();
 
     adresaci.push_back(adresat);
-    plikZAdresatami.dopiszAdresataDoPliku(adresat);
+    if (plikZAdresatami.dopiszAdresataDoPliku(adresat))
+        cout << "Nowy adresat zostal dodany" << endl;
+    else
+        cout << "Blad. Nie udalo sie dodac nowego adresata do pliku." << endl;
+    system("pause");
 
-    ++idOstatniegoAdresata;
+    //++idOstatniegoAdresata; // Do usuniecia, inkrementacja ma byc wykonana w klasie plikZAdresatami! 12.10.2025
 }
 
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
 
-    adresat.ustawId(++idOstatniegoAdresata);
+    //adresat.ustawId(++idOstatniegoAdresata);
+    adresat.ustawId((plikZAdresatami.pobierzIdOstatniegoAdresata() + 1));
     adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";

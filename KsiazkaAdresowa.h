@@ -29,11 +29,10 @@ public:
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void logowanieUzytkownika();
-
-    void dodajAdresata();
-    void wypiszWszystkichAdresatow();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wylogowanieUzytkownika();
+    void dodajAdresata();
+    void wypiszWszystkichAdresatow();
 
 };
 

@@ -26,7 +26,15 @@ void KsiazkaAdresowa::logowanieUzytkownika()
 
 void KsiazkaAdresowa::wypiszWszystkichAdresatow()
 {
-    adresatMenedzer->wypiszWszystkichAdresatow();
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer->wypiszWszystkichAdresatow();
+    }
+    else
+    {
+        cout << "Aby wypisac wszystkich adresatow, nalezy najpierw sie zalogowac" << endl;
+        system("pause");
+    }
 }
 
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()

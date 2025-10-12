@@ -1,6 +1,0 @@
-1|1|Wiki|Dolinska|111 111 111|wd@wp.pl|warszawa|
-2|3|Jarek|Dolinski|222 222 222|jd@wp.pl|sochaczew|
-3|1|John|Travolta|123 456 789|jt@gmail.com|sunset boulvar|
-4|1|Karol|Nawrocki|111 444 555|kn@wp.pl|belweder|
-5|2|Sfinx|Ancient|000 000 001|sa@gmail.com|egipt|
-6|3|Albert|Einstein|314 000 000|ae@gmail.com|berclay|

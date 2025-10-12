@@ -26,7 +26,7 @@ class AdresatMenedzer
     //int podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
     Adresat podajDaneNowegoAdresata();
-    string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst); // Do usuniecia?
+    //string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst); // Do usuniecia?
 
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)

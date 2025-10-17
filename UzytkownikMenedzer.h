@@ -22,10 +22,14 @@ class UzytkownikMenedzer
     Uzytkownik podajDaneNowegoUzytkownika();
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
-    void zapiszWszystkichUzytkownikowDoPliku();
+    //void zapiszWszystkichUzytkownikowDoPliku(); NIEPOTRZEBNE?
 
 public:
-    UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {};
+    UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami)
+    {
+        idZalogowanegoUzytkownika = 0;
+        uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+    };
 
     // Getters
     int pobierzIdZalogowanegoUzytkownika();
@@ -35,9 +39,11 @@ public:
 
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    void wczytajUzytkownikowZPliku();
     void logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
+
+    bool czyUzytkownikJestZalogowany();
+    void wylogowanieUzytkownika();
 };
 
 #endif // UZYTKOWNIKMENEDZER_H

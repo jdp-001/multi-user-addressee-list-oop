@@ -7,20 +7,20 @@ using namespace std;
 int main()
 {
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
-    //KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
 
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+
     ksiazkaAdresowa.logowanieUzytkownika();
-    //ksiazkaAdresowa.rejestracjaUzytkownika();
-    //ksiazkaAdresowa.rejestracjaUzytkownika();
-    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-    ksiazkaAdresowa.wypiszWszystkichAdresatow();
-    //ksiazkaAdresowa.wylogowanieUzytkownika();
+
     ksiazkaAdresowa.dodajAdresata();
+
     ksiazkaAdresowa.wypiszWszystkichAdresatow();
 
+    ksiazkaAdresowa.wylogowanieUzytkownika();
+
+    //ksiazkaAdresowa.rejestracjaUzytkownika();
     //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+    //ksiazkaAdresowa.wypiszWszystkichAdresatow();
 
     return 0;
 }

@@ -65,3 +65,15 @@ void KsiazkaAdresowa::dodajAdresata()
         system("pause");
     }
 }
+
+bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
+{
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}

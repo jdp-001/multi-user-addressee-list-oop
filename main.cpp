@@ -24,3 +24,34 @@ int main()
 
     return 0;
 }
+
+
+
+
+
+// -------------------------------------------------------------------------------------------------
+// TESTY
+// -------------------------------------------------------------------------------------------------
+
+// Testy AdresatMenedzer
+#include "AdresatMenedzer.h"
+
+int testyAdresata_main()
+{
+    AdresatMenedzer adresatMenedzer("Adresaci.txt", 1);
+    adresatMenedzer.wypiszWszystkichAdresatow();
+    adresatMenedzer.dodajAdresata();
+    adresatMenedzer.wypiszWszystkichAdresatow();
+}
+
+// Testy PlikZAdresatami
+#include "Adresat.h"
+#include "PlikZAdresatami.h"
+
+int testyPlikZAdresatami_main()
+{
+    PlikZAdresatami plikZAdresatami("Adresaci-test.txt");
+    Adresat adresat(1, 2, "Janek", "Twardowski", "999 888 333", "janek.02.pl", "ul. Jankowa 3a");
+    plikZAdresatami.dopiszAdresataDoPliku(adresat);
+    cout << plikZAdresatami.pobierzIdOstatniegoAdresata();
+}

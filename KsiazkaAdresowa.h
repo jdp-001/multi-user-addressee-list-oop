@@ -34,6 +34,9 @@ public:
     void dodajAdresata();
     void wypiszWszystkichAdresatow();
     bool czyUzytkownikJestZalogowany();
+    // 25.10.2025 poni¿ej
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
 
 };
 

@@ -77,3 +77,28 @@ bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
         return false;
     }
 }
+
+// 25.10.2025 poni¿ej
+void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
+{
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer->wyszukajAdresatowPoImieniu();
+    } else
+    {
+        cout << "Aby wyszukiwac adresatow, nalezy sie najpierw zalogowac." << endl;
+        system("pause");
+    }
+}
+
+void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
+{
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer->wyszukajAdresatowPoNazwisku();
+    } else
+    {
+        cout << "Aby wyszukiwac adresatow, nalezy sie najpierw zalogowac." << endl;
+        system("pause");
+    }
+}

@@ -52,9 +52,11 @@ int main()
                 ksiazkaAdresowa.dodajAdresata();
                 break;
             case '2':
+                ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                 //wyszukajAdresatowPoImieniu(adresaci);
                 break;
             case '3':
+                ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
                 //wyszukajAdresatowPoNazwisku(adresaci);
                 break;
             case '4':

@@ -18,6 +18,8 @@ public:
     static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     static char wczytajZnak();
     static int wczytajLiczbeCalkowita();
+    // 25.10.2025
+    static void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 };
 
 #endif // METODYPOMOCNICZE_H

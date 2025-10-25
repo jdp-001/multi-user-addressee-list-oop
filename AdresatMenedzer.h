@@ -45,6 +45,9 @@ public:
     void pobierzAdresatowZalogowanegoUzytkownikaZPliku(); // tego nie mna u Artura!
     void dodajAdresata();
     void wypiszWszystkichAdresatow(); // U Artura inna nazwa - wyswietlWszystkichAdresatow()
+    // 25.10.2025
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
 };
 
 #endif // ADRESATMENEDZER_H

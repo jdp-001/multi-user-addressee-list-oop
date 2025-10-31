@@ -18,7 +18,7 @@ class AdresatMenedzer
 {
     const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
     //int idOstatniegoAdresata; // Do usuniecia?
-    //int idUsunietegoAdresata;
+    int idUsunietegoAdresata;
 
     vector <Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
@@ -38,6 +38,8 @@ public:
 
     // Getters
     int pobierzIdZalogowanegoUzytkownika(); // tego nie ma u Artura!
+    // 29.10.2025
+    int pobierzIdUsunietegoAdresata();
 
     // Setters
     void ustawIdZalogowanegoUzytkownika(int idPrzekazywane); // tego nie ma u Artura!
@@ -48,6 +50,8 @@ public:
     // 25.10.2025
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
+    // 28.10.2025
+    void usunAdresata();
 };
 
 #endif // ADRESATMENEDZER_H

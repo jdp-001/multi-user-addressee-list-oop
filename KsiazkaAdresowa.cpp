@@ -78,7 +78,7 @@ bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
     }
 }
 
-// 25.10.2025 poni¿ej
+// 25.10.2025 ponizej
 void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
 {
     if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
@@ -101,4 +101,36 @@ void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
         cout << "Aby wyszukiwac adresatow, nalezy sie najpierw zalogowac." << endl;
         system("pause");
     }
+}
+
+// 28.10.2025 ponizej
+void KsiazkaAdresowa::usunAdresata()
+{
+    // Test uruchomienia metody
+    cout << "metoda KsiazkaAdresowa::usunAdresata() zostala uruchomiona" << endl;
+    system("pause");
+
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        // Test start
+        cout << "Wywoluje linie: adresatMenedzer->usunAdresata();" << endl;
+        system("pause");
+        // Test end
+
+        adresatMenedzer->usunAdresata();
+
+        // Test start
+        cout << "Wykonal linie: adresatMenedzer->usunAdresata();" << endl;
+        system("pause");
+        // Test end
+
+    } else
+    {
+        cout << "Aby usuwac adresatow, nalezy sie najpierw zalogowac." << endl;
+        system("pause");
+    }
+}
+
+int KsiazkaAdresowa::pobierzIdUsunietegoAdresata() {
+    return adresatMenedzer->pobierzIdUsunietegoAdresata();
 }

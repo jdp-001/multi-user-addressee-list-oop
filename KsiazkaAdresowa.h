@@ -40,7 +40,8 @@ public:
     // 28.10.2025 ponizej
     void usunAdresata();
     int pobierzIdUsunietegoAdresata();
-
+    // 01.11.2025
+    void edytujAdresata();
 };
 
 #endif // KSIAZKAADRESOWA_H

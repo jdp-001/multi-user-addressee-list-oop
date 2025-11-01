@@ -72,6 +72,8 @@ int main()
                 //idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
                 break;
             case '6':
+                // 01.11.2025
+                ksiazkaAdresowa.edytujAdresata();
                 //edytujAdresata(adresaci);
                 break;
             case '7':

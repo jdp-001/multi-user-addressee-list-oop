@@ -52,6 +52,11 @@ public:
     void wyszukajAdresatowPoNazwisku();
     // 28.10.2025
     void usunAdresata();
+    // 01.11.2025
+    void edytujAdresata();
+    char wybierzOpcjeZMenuEdycja();
+    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
+    string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
 };
 
 #endif // ADRESATMENEDZER_H

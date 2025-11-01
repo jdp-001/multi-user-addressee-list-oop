@@ -46,6 +46,9 @@ public:
     //void usunWybranaLinieWPliku(int numerUsuwanejLinii);
     // 01.11.2025
     void usunLinieWPlikuZawierajacaWybranegoAdresata(int idAdresata);
+    //int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
+    //void edytujWybranaLinieWPliku(int numerEdytowanejLinii, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
+    void edytujLinieZWybranymAdresatemWPliku(int idAdresata, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
 };
 
 #endif // PLIKZADRESATAMI_H

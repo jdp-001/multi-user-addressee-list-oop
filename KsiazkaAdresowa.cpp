@@ -131,6 +131,21 @@ void KsiazkaAdresowa::usunAdresata()
     }
 }
 
+// To chyba jest juz niepotrzebne?
 int KsiazkaAdresowa::pobierzIdUsunietegoAdresata() {
     return adresatMenedzer->pobierzIdUsunietegoAdresata();
+}
+
+// 01.11.2025
+
+void KsiazkaAdresowa::edytujAdresata()
+{
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer->edytujAdresata();
+    } else
+    {
+        cout << "Aby edytowac adresatow, nalezy sie najpierw zalogowac." << endl;
+        system("pause");
+    }
 }

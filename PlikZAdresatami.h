@@ -41,9 +41,11 @@ public:
     bool dopiszAdresataDoPliku(Adresat adresat);
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     // 28.10.2025 ponizej
-    int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
+    //int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
     // 29.10.2025
-    void usunWybranaLinieWPliku(int numerUsuwanejLinii);
+    //void usunWybranaLinieWPliku(int numerUsuwanejLinii);
+    // 01.11.2025
+    void usunLinieWPlikuZawierajacaWybranegoAdresata(int idAdresata);
 };
 
 #endif // PLIKZADRESATAMI_H

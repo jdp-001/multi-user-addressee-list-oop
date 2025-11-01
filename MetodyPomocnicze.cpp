@@ -74,7 +74,7 @@ int MetodyPomocnicze::wczytajLiczbeCalkowita()
         getline(cin, wejscie);
 
         stringstream myStream(wejscie);
-        if (myStream >> wejscie)
+        if (myStream >> liczba) // Poprawiono!!!!!!!!!!
             break;
         cout << "To nie jest liczba. Wpisz ponownie. " << endl;
     }
@@ -87,4 +87,29 @@ void MetodyPomocnicze::wyswietlIloscWyszukanychAdresatow(int iloscAdresatow)
         cout << endl << "W ksiazce adresowej nie ma adresatow z tymi danymi." << endl;
     else
         cout << endl << "Ilosc adresatow w ksiazce adresowej wynosi: " << iloscAdresatow << endl << endl;
+}
+
+// 28.10.2025
+int MetodyPomocnicze::podajIdWybranegoAdresata()
+{
+    int idWybranegoAdresata = 0;
+    cout << "Podaj numer ID Adresata: ";
+    idWybranegoAdresata = wczytajLiczbeCalkowita(); // Tutaj jest ukryty blad!!!!!!!!!!!!
+    return idWybranegoAdresata;
+}
+
+// 29.10.2025
+
+void MetodyPomocnicze::usunPlik(string nazwaPlikuZRozszerzeniem)
+{
+    if (remove(nazwaPlikuZRozszerzeniem.c_str()) == 0) {}
+    else
+        cout << "Nie udalo sie usunac pliku " << nazwaPlikuZRozszerzeniem << endl;
+}
+
+void MetodyPomocnicze::zmienNazwePliku(string staraNazwa, string nowaNazwa)
+{
+    if (rename(staraNazwa.c_str(), nowaNazwa.c_str()) == 0) {}
+    else
+        cout << "Nazwa pliku nie zostala zmieniona." << staraNazwa << endl;
 }

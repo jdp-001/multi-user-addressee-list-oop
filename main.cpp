@@ -64,6 +64,10 @@ int main()
                 ksiazkaAdresowa.wypiszWszystkichAdresatow();
                 break;
             case '5':
+                ksiazkaAdresowa.usunAdresata();
+                cout << "Id UsunietegoAdresata (to tymczasowy komentarz): " << ksiazkaAdresowa.pobierzIdUsunietegoAdresata() << endl;
+                system("pause");
+                Sleep(2000);
                 //idUsunietegoAdresata = usunAdresata(adresaci);
                 //idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
                 break;

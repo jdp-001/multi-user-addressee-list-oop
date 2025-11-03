@@ -17,17 +17,14 @@ int main()
     {
         if (!ksiazkaAdresowa.czyUzytkownikJestZalogowany())
         {
-            cout << "Uzytkownik jest zalogowany" << endl; // Do usuniecia
             wybor = wybierzOpcjeZMenuGlownego();
 
             switch (wybor)
             {
             case '1':
-                //rejestracjaUzytkownika(uzytkownicy);
                 ksiazkaAdresowa.rejestracjaUzytkownika();
                 break;
             case '2':
-                //idZalogowanegoUzytkownika = logowanieUzytkownika(uzytkownicy);
                 ksiazkaAdresowa.logowanieUzytkownika();
                 break;
             case '9':
@@ -42,47 +39,32 @@ int main()
         }
         else
         {
-            cout << "Uzytkownik nie jest zalogowany" << endl; // Do usuniecia
             wybor = wybierzOpcjeZMenuUzytkownika();
 
             switch (wybor)
             {
             case '1':
-                //idOstatniegoAdresata = dodajAdresata(adresaci, idZalogowanegoUzytkownika, idOstatniegoAdresata);
                 ksiazkaAdresowa.dodajAdresata();
                 break;
             case '2':
                 ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
-                //wyszukajAdresatowPoImieniu(adresaci);
                 break;
             case '3':
                 ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
-                //wyszukajAdresatowPoNazwisku(adresaci);
                 break;
             case '4':
-                //wyswietlWszystkichAdresatow(adresaci);
                 ksiazkaAdresowa.wypiszWszystkichAdresatow();
                 break;
             case '5':
                 ksiazkaAdresowa.usunAdresata();
-                cout << "Id UsunietegoAdresata (to tymczasowy komentarz): " << ksiazkaAdresowa.pobierzIdUsunietegoAdresata() << endl;
-                system("pause");
-                Sleep(2000);
-                //idUsunietegoAdresata = usunAdresata(adresaci);
-                //idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
                 break;
             case '6':
-                // 01.11.2025
                 ksiazkaAdresowa.edytujAdresata();
-                //edytujAdresata(adresaci);
                 break;
             case '7':
-                //zmianaHaslaZalogowanegoUzytkownika(uzytkownicy, idZalogowanegoUzytkownika);
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
                 break;
             case '8':
-                //idZalogowanegoUzytkownika = 0;
-                //adresaci.clear();
                 ksiazkaAdresowa.wylogowanieUzytkownika();
                 break;
             }
@@ -90,23 +72,6 @@ int main()
     }
     return 0;
 }
-
-
-
-
-    // Dostepne metody klasy KsiazkaAdresowa
-    // -------------------------------------
-    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-    //ksiazkaAdresowa.logowanieUzytkownika();
-    //ksiazkaAdresowa.wylogowanieUzytkownika();
-    //ksiazkaAdresowa.dodajAdresata();
-    //ksiazkaAdresowa.rejestracjaUzytkownika();
-    //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-    //ksiazkaAdresowa.wypiszWszystkichAdresatow();
-
-
-
-
 
 char wybierzOpcjeZMenuGlownego()
 {

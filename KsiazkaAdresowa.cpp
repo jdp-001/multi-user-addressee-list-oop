@@ -12,16 +12,11 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 
 void KsiazkaAdresowa::logowanieUzytkownika()
 {
-    //int wehikulId;
     uzytkownikMenedzer.logowanieUzytkownika();
     if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
     {
         adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
     }
-
-    //wehikulId = uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
-    //adresatMenedzer.ustawIdZalogowanegoUzytkownika(wehikulId);
-    //adresatMenedzer.pobierzAdresatowZalogowanegoUzytkownikaZPliku(); // Tutaj mozemy pobrac idOstatniegoAdresata
 }
 
 void KsiazkaAdresowa::wypiszWszystkichAdresatow()
@@ -42,17 +37,13 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
     uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
 }
 
-// WPROWADZONA ZMIANA 16:56 !!!
 void KsiazkaAdresowa::wylogowanieUzytkownika()
 {
     uzytkownikMenedzer.wylogowanieUzytkownika();
     delete adresatMenedzer;
     adresatMenedzer = NULL;
-    //uzytkownikMenedzer.ustawIdZalogowanegoUzytkownika(0);
-    //adresatMenedzer->ustawIdZalogowanegoUzytkownika(0);
 }
 
-// WPROWADZONA ZMIANA 16:56
 void KsiazkaAdresowa::dodajAdresata()
 {
     if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
@@ -78,13 +69,13 @@ bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
     }
 }
 
-// 25.10.2025 ponizej
 void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
 {
     if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
     {
         adresatMenedzer->wyszukajAdresatowPoImieniu();
-    } else
+    }
+    else
     {
         cout << "Aby wyszukiwac adresatow, nalezy sie najpierw zalogowac." << endl;
         system("pause");
@@ -96,54 +87,37 @@ void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
     if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
     {
         adresatMenedzer->wyszukajAdresatowPoNazwisku();
-    } else
+    }
+    else
     {
         cout << "Aby wyszukiwac adresatow, nalezy sie najpierw zalogowac." << endl;
         system("pause");
     }
 }
 
-// 28.10.2025 ponizej
 void KsiazkaAdresowa::usunAdresata()
 {
-    // Test uruchomienia metody
     cout << "metoda KsiazkaAdresowa::usunAdresata() zostala uruchomiona" << endl;
     system("pause");
 
     if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
     {
-        // Test start
-        cout << "Wywoluje linie: adresatMenedzer->usunAdresata();" << endl;
-        system("pause");
-        // Test end
-
         adresatMenedzer->usunAdresata();
-
-        // Test start
-        cout << "Wykonal linie: adresatMenedzer->usunAdresata();" << endl;
-        system("pause");
-        // Test end
-
-    } else
+    }
+    else
     {
         cout << "Aby usuwac adresatow, nalezy sie najpierw zalogowac." << endl;
         system("pause");
     }
 }
 
-// To chyba jest juz niepotrzebne?
-int KsiazkaAdresowa::pobierzIdUsunietegoAdresata() {
-    return adresatMenedzer->pobierzIdUsunietegoAdresata();
-}
-
-// 01.11.2025
-
 void KsiazkaAdresowa::edytujAdresata()
 {
     if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
     {
         adresatMenedzer->edytujAdresata();
-    } else
+    }
+    else
     {
         cout << "Aby edytowac adresatow, nalezy sie najpierw zalogowac." << endl;
         system("pause");

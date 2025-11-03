@@ -27,9 +27,6 @@ public:
         this->adres = adres;
     }
 
-    // Konstruktor domyslny - alternatywa dla wartosci domyslnych
-    //Adresat() = default;
-
     // Setters
     void ustawId(int noweId);
     void ustawIdUzytkownika(int noweIdUzytkownika);
@@ -47,7 +44,6 @@ public:
     string pobierzNumerTelefonu();
     string pobierzEmail();
     string pobierzAdres();
-
 };
 
 #endif // UZYTKOWNIK_H

@@ -80,7 +80,6 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login)
 
 void UzytkownikMenedzer::logowanieUzytkownika()
 {
-    //Uzytkownik uzytkownik;
     string login = "", haslo = "";
 
     cout << endl << "Podaj login: ";

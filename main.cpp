@@ -94,7 +94,7 @@ int main()
 
 
 
-    // Dostêpne metody klasy KsiazkaAdresowa
+    // Dostepne metody klasy KsiazkaAdresowa
     // -------------------------------------
     //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
     //ksiazkaAdresowa.logowanieUzytkownika();

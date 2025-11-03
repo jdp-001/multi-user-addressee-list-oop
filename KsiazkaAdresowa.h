@@ -34,13 +34,10 @@ public:
     void dodajAdresata();
     void wypiszWszystkichAdresatow();
     bool czyUzytkownikJestZalogowany();
-    // 25.10.2025 ponizej
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
-    // 28.10.2025 ponizej
     void usunAdresata();
     int pobierzIdUsunietegoAdresata();
-    // 01.11.2025
     void edytujAdresata();
 };
 

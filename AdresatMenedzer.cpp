@@ -5,22 +5,15 @@ int AdresatMenedzer::pobierzIdZalogowanegoUzytkownika()
 {
     return ID_ZALOGOWANEGO_UZYTKOWNIKA;
 }
-// 29.10.2025
+
 int AdresatMenedzer::pobierzIdUsunietegoAdresata()
 {
     return idUsunietegoAdresata;
 }
 
-// Setters
-//void AdresatMenedzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)
-//{
-//   idZalogowanegoUzytkownika = noweIdZalogowanegoUzytkownika;
-//}
-
 void AdresatMenedzer::pobierzAdresatowZalogowanegoUzytkownikaZPliku()
 {
     adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
-    //idOstatniegoAdresata = plikZAdresatami.pobierzIdOstatniegoAdresata();
 }
 
 void AdresatMenedzer::wypiszWszystkichAdresatow()
@@ -41,7 +34,6 @@ void AdresatMenedzer::wypiszWszystkichAdresatow()
         cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
     }
     system("pause");
-
 }
 
 void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
@@ -78,32 +70,24 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
     Adresat adresat;
     string imie, nazwisko, numerTelefonu, email, adres;
 
-    //adresat.ustawId(++idOstatniegoAdresata);
     adresat.ustawId((plikZAdresatami.pobierzIdOstatniegoAdresata() + 1));
     adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
-    //adresat.ustawImie(MetodyPomocnicze::wczytajLinie());
     imie = MetodyPomocnicze::wczytajLinie();
-    //adresat.ustawImie(zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzImie()));
     imie = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(imie);
 
     cout << "Podaj nazwisko: ";
-    //adresat.ustawNazwisko(MetodyPomocnicze::wczytajLinie());
     nazwisko = MetodyPomocnicze::wczytajLinie();
-    //adresat.ustawNazwisko(zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzNazwisko()));
     nazwisko = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(nazwisko);
 
     cout << "Podaj numer telefonu: ";
-    //adresat.ustawNumerTelefonu(MetodyPomocnicze::wczytajLinie());
     numerTelefonu = MetodyPomocnicze::wczytajLinie();
 
     cout << "Podaj email: ";
-    //adresat.ustawEmail(MetodyPomocnicze::wczytajLinie());
     email = MetodyPomocnicze::wczytajLinie();
 
     cout << "Podaj adres: ";
-    //adresat.ustawAdres(MetodyPomocnicze::wczytajLinie());
     adres = MetodyPomocnicze::wczytajLinie();
 
     adresat.ustawImie(imie);
@@ -200,13 +184,10 @@ void AdresatMenedzer::usunAdresata()
             znak = MetodyPomocnicze::wczytajZnak();
             if (znak == 't')
             {
-                //numerLiniiUsuwanegoAdresata = plikZAdresatami.zwrocNumerLiniiSzukanegoAdresata(idUsuwanegoAdresata);
-                //plikZAdresatami.usunWybranaLinieWPliku(numerLiniiUsuwanegoAdresata);
                 plikZAdresatami.usunLinieWPlikuZawierajacaWybranegoAdresata(idUsuwanegoAdresata);
                 adresaci.erase(itr);
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
                 system("pause");
-                //return idUsuwanegoAdresata;
                 idUsunietegoAdresata = idUsuwanegoAdresata;
                 return;
             }
@@ -214,7 +195,6 @@ void AdresatMenedzer::usunAdresata()
             {
                 cout << endl << endl << "Wybrany adresat NIE zostal usuniety" << endl << endl;
                 system("pause");
-                //return 0;
                 idUsunietegoAdresata = 0;
                 return;
             }
@@ -225,12 +205,9 @@ void AdresatMenedzer::usunAdresata()
         cout << endl << "Nie ma takiego adresata w ksiazce adresowej" << endl << endl;
         system("pause");
     }
-    //return 0;
     idUsunietegoAdresata = 0;
     return;
 }
-
-// 01.11.2025
 
 void AdresatMenedzer::edytujAdresata()
 {
@@ -322,9 +299,7 @@ void AdresatMenedzer::zaktualizujDaneWybranegoAdresata(Adresat adresat)
     int numerLiniiEdytowanegoAdresata = 0;
     string liniaZDanymiAdresata = "";
 
-    //numerLiniiEdytowanegoAdresata = plikZAdresatami.zwrocNumerLiniiSzukanegoAdresata(adresat.pobierzId());
     liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
-    //plikZAdresatami.edytujWybranaLinieWPliku(numerLiniiEdytowanegoAdresata, liniaZDanymiAdresata);
     plikZAdresatami.edytujLinieZWybranymAdresatemWPliku(adresat.pobierzId(), liniaZDanymiAdresata);
 
     cout << endl << "Dane zostaly zaktualizowane." << endl << endl;

@@ -9,18 +9,20 @@
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
 
+#include "PlikTekstowy.h"
+
 using namespace std;
 
-class PlikZAdresatami
+class PlikZAdresatami : public PlikTekstowy
 {
-    const string NAZWA_PLIKU_Z_ADRESATAMI;
+    //const string NAZWA_PLIKU_Z_ADRESATAMI;
     // 29.10.2025
     const string NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI = "Adresaci_tymczasowo.txt";
     int idOstatniegoAdresata;
     // 28.10.2025
-    int idUsuwanegoAdresata; // Niepotrzebne?
+    //int idUsuwanegoAdresata; // Niepotrzebne?
 
-    bool czyPlikJestPusty();
+    //bool czyPlikJestPusty();
     //string zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami(Adresat adresat);
     Adresat pobierzDaneAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
@@ -33,7 +35,8 @@ public:
     //getters
     int pobierzIdOstatniegoAdresata();
 
-    PlikZAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami)
+    //PlikZAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami)
+    PlikZAdresatami(string nazwaPlikuZAdresatami) : PlikTekstowy(nazwaPlikuZAdresatami)
     {
         idOstatniegoAdresata = 0; // Sugestia Artura
     };

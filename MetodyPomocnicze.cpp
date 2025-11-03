@@ -74,7 +74,7 @@ int MetodyPomocnicze::wczytajLiczbeCalkowita()
         getline(cin, wejscie);
 
         stringstream myStream(wejscie);
-        if (myStream >> liczba) // Poprawiono!!!!!!!!!!
+        if (myStream >> liczba)
             break;
         cout << "To nie jest liczba. Wpisz ponownie. " << endl;
     }
@@ -89,16 +89,13 @@ void MetodyPomocnicze::wyswietlIloscWyszukanychAdresatow(int iloscAdresatow)
         cout << endl << "Ilosc adresatow w ksiazce adresowej wynosi: " << iloscAdresatow << endl << endl;
 }
 
-// 28.10.2025
 int MetodyPomocnicze::podajIdWybranegoAdresata()
 {
     int idWybranegoAdresata = 0;
     cout << "Podaj numer ID Adresata: ";
-    idWybranegoAdresata = wczytajLiczbeCalkowita(); // Tutaj jest ukryty blad!!!!!!!!!!!!
+    idWybranegoAdresata = wczytajLiczbeCalkowita();
     return idWybranegoAdresata;
 }
-
-// 29.10.2025
 
 void MetodyPomocnicze::usunPlik(string nazwaPlikuZRozszerzeniem)
 {

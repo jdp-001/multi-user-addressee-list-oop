@@ -153,7 +153,10 @@ void PlikZAdresatami::usunLinieWPlikuZawierajacaWybranegoAdresata(int idAdresata
         {
             // Tych przypadkow jest tyle, gdyz chcemy osiagnac taki efekt,
             // aby na koncu pliku nie bylo pustej linii
-            if(idAdresata == pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia)) {}
+            if(idAdresata == pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia))
+                {
+                    czyZnalezionoLinieZawierajacaWybranegoAdresata = true;
+                }
             else if (numerWczytanejLinii == 1)
                 tymczasowyPlikTekstowy << wczytanaLinia;
             else if (numerWczytanejLinii == 2 && czyZnalezionoLinieZawierajacaWybranegoAdresata)

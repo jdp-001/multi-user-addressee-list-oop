@@ -97,9 +97,6 @@ void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
 
 void KsiazkaAdresowa::usunAdresata()
 {
-    cout << "metoda KsiazkaAdresowa::usunAdresata() zostala uruchomiona" << endl;
-    system("pause");
-
     if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
     {
         adresatMenedzer->usunAdresata();
